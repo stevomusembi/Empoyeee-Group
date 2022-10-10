@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
@@ -16,13 +13,16 @@ import javax.persistence.Table;
 @Table(name="employees")
 public class Employee {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int userId;
     private String firstName;
     private String  lastName;
     private String gender;
+    @Column(unique = true)
     private int idNo;
     private String address;
     private String department;
     private int salary;
+
 }
+
