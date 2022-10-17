@@ -43,6 +43,6 @@ public class EmployeeService {
         existingEmployee.setDepartment(employee.getDepartment());
         existingEmployee.setGender(employee.getGender());
         existingEmployee.setSalary(employee.getSalary());
-   return employeeRepository.save(existingEmployee);
+        return employeeRepository.save(existingEmployee);
     }
 }

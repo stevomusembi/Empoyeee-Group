@@ -24,5 +24,8 @@ public class Employee {
     private String department;
     private int salary;
 
+
+
+
 }
 
